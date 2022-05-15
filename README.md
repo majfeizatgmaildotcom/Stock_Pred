@@ -23,3 +23,17 @@ There are four main steps in this project:
 3) Feature Selections
 4) Building Linear Regression based on Ridge and Lasso and optimizing for the 
 regularization
+
+## Dataset
+The data is downloaded from the NASDAQ Website and selected all US stock data after the 
+year 2000. The link is provided below:
+https://data.nasdaq.com/tables/WIKIP/WIKI-PRICES
+The adjusted open, high, low, and close prices and the volume collected for all stocks for the 
+2006–2016 time period.
+There are 11,343,366 data points (row).
+2014–2016 data is used as an “out-of-sample” period to test the performance of a strategy 
+based on linear regression. The dollar volume is computed as the product of closing price and 
+trading volume and then selected 500 stocks with at least eight years of data and the highest 
+average daily trading volume in dollar terms.
+I computed daily returns and kept only inliers with values between -100% and +100% as a basic 
+check against data error.
